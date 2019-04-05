@@ -22,7 +22,7 @@ namespace TestExercises.Challenge1
 
             // Checking the results page contains the text "deepmatter and checking the link is present"
             webDriver.PageSource.Contains("deepmatter");
-            webDriver.PageSource.Contains("https://www.deepmatter.io");
+            Assert.IsTrue(webDriver.PageSource.Contains("https://www.deepmatter.io"));
             webDriver.Quit();
         }
     }

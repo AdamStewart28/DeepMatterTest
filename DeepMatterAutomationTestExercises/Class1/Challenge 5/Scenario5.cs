@@ -31,8 +31,8 @@ namespace TestExercises.Challenge5
 
             // Checking the error message is present
             Thread.Sleep(3000);
-            webDriver.FindElement(By.ClassName("field-error"));
-            webDriver.FindElement(By.XPath("//div[normalize-space()='Email Address is not valid. Email addresses should follow the format user@domain.com.']"));
+            Assert.IsNotNull(webDriver.FindElement(By.ClassName("field-error")));
+            Assert.IsNotNull(webDriver.FindElement(By.XPath("//div[normalize-space()='Email Address is not valid. Email addresses should follow the format user@domain.com.']")));
             webDriver.Quit();
         }
     }

@@ -36,8 +36,8 @@ namespace TestExercises.Challenge3
 
             // Checking the error message is present
             Thread.Sleep(3000);
-            webDriver.FindElement(By.ClassName("field-error"));
-            webDriver.FindElement(By.XPath("//div[normalize-space()='Email Address is required.']"));
+            Assert.IsNotNull(webDriver.FindElement(By.ClassName("field-error")));
+            Assert.IsNotNull(webDriver.FindElement(By.XPath("//div[normalize-space()='Email Address is required.']")));
             webDriver.Quit();
         }
     }
